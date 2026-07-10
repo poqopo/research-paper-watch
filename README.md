@@ -130,6 +130,7 @@ OPENCLAW_PAPER_CRON_TZ="Asia/Seoul"
 OPENCLAW_PAPER_REPORT_MAX=5
 OPENCLAW_PAPER_ATTACH_HTML=1
 OPENCLAW_PAPER_BUILD_PAGES=1
+OPENCLAW_PAPER_PUBLISH_PAGES=1
 OPENCLAW_PAPER_PAGES_URL="https://<user>.github.io/<repo>/"
 OPENCLAW_TELEGRAM_THREAD_ID=42
 ```
@@ -142,7 +143,7 @@ When `OPENCLAW_PAPER_ATTACH_HTML=1`, daily cron sends only the newly detected ca
 
 The text summary also includes a short research-trend brief based on the current candidate topic distribution.
 
-By default `OPENCLAW_PAPER_BUILD_PAGES=1`, so the cron run refreshes `docs/` after the paper agent updates the generated HTML. Publishing still requires this folder to be committed and pushed to a GitHub repository configured for Pages. If `OPENCLAW_PAPER_PAGES_URL` is set, the daily Telegram summary appends that URL as the full-view link.
+By default `OPENCLAW_PAPER_BUILD_PAGES=1`, so the cron run refreshes `docs/` after the paper agent updates the generated HTML. Set `OPENCLAW_PAPER_PUBLISH_PAGES=1` to commit and push changed `docs/` files to the configured `origin` remote. If `OPENCLAW_PAPER_PAGES_URL` is set, the daily Telegram summary appends that URL as the full-view link.
 
 Telegram command replies are handled by a deterministic bridge, not by arbitrary shell execution. Supported messages:
 
