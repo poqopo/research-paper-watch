@@ -1,0 +1,8 @@
+# Keep the public GitHub Pages repository scoped to the deployable site.
+# The local vault, agent state, reports, and OpenClaw/Telegram automation stay local.
+*
+
+!.gitignore
+!README.md
+!docs/
+!docs/**

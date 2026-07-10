@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Paper Watch</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #20242b;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      letter-spacing: 0;
+      line-height: 1.45;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px 28px 84px;
+    }
+    h1 {
+      margin: 0;
+      color: #171b22;
+      font-size: 38px;
+      line-height: 1.1;
+      font-weight: 520;
+    }
+    h2 {
+      margin: 0 0 12px;
+      color: #171b22;
+      font-size: 19px;
+      line-height: 1.25;
+      font-weight: 620;
+    }
+    p {
+      margin: 0;
+      color: #4d5560;
+      font-size: 15px;
+    }
+    .header {
+      display: grid;
+      gap: 14px;
+      padding: 28px 0 30px;
+      border-bottom: 1px solid #dddddd;
+    }
+    .meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      color: #5f6874;
+      font-size: 13px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 9px;
+      border: 1px solid #d9dee4;
+      border-radius: 999px;
+      background: #f7f9fb;
+    }
+    .views {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .view-card {
+      min-height: 136px;
+      display: grid;
+      align-content: space-between;
+      gap: 18px;
+      padding: 18px;
+      border: 1px solid #d8dde3;
+      border-radius: 8px;
+      background: #fbfcfd;
+      color: #171b22;
+      text-decoration: none;
+    }
+    .view-card:hover {
+      border-color: #93a9bb;
+      background: #f4f8fa;
+    }
+    .view-card span {
+      font-size: 21px;
+      font-weight: 620;
+    }
+    .view-card strong {
+      color: #58616d;
+      font-size: 14px;
+      font-weight: 450;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: start;
+      margin-top: 20px;
+    }
+    .panel {
+      border-top: 1px solid #dddddd;
+      padding-top: 18px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 9px 0;
+      border-bottom: 1px solid #edf0f2;
+      color: #3d4650;
+      font-size: 14px;
+    }
+    li strong {
+      flex: 0 0 auto;
+      color: #1f2933;
+      font-weight: 620;
+      white-space: nowrap;
+    }
+    
+  .rpe-pages-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    min-height: 54px;
+    padding: 10px 28px;
+    border-bottom: 1px solid #dddddd;
+    background: rgba(255, 255, 255, 0.96);
+    color: #181d26;
+    backdrop-filter: blur(12px);
+  }
+  .rpe-pages-brand,
+  .rpe-pages-nav-link {
+    color: #181d26;
+    text-decoration: none;
+  }
+  .rpe-pages-brand {
+    font-size: 15px;
+    font-weight: 650;
+    white-space: nowrap;
+  }
+  .rpe-pages-links {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .rpe-pages-nav-link {
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #4b5563;
+    font-size: 13px;
+    line-height: 1;
+  }
+  .rpe-pages-nav-link:hover,
+  .rpe-pages-nav-link.is-active {
+    border-color: #cfd8df;
+    background: #f5f8fa;
+    color: #171b22;
+  }
+  @media (max-width: 640px) {
+    .rpe-pages-nav {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 10px 16px;
+    }
+    .rpe-pages-links {
+      justify-content: flex-start;
+    }
+  }
+
+    @media (max-width: 760px) {
+      main { padding: 30px 18px 64px; }
+      h1 { font-size: 31px; }
+      .views,
+      .dashboard { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav class="rpe-pages-nav" aria-label="Research paper views">
+  <a class="rpe-pages-brand" href="./">Paper Watch</a>
+  <div class="rpe-pages-links">
+    <a class="rpe-pages-nav-link" href="explorer/">Explorer</a>
+    <a class="rpe-pages-nav-link" href="papers/">Papers</a>
+    <a class="rpe-pages-nav-link" href="ideas/">Ideas</a>
+  </div>
+</nav>
+<main>
+  <section class="header">
+    <h1>Research Paper Watch</h1>
+    <p>Daily literature tracking views for the local paper vault.</p>
+    <div class="meta">
+      <span class="chip">283 papers</span>
+      <span class="chip">18 major topics</span>
+      <span class="chip">6 idea candidates</span>
+      <span class="chip">Built 2026-07-10 06:05 UTC</span>
+    </div>
+  </section>
+  <section class="views" aria-label="Paper watch views">
+    <a class="view-card" href="explorer/">
+      <span>Topic Explorer</span>
+      <strong>Topic and subtopic map for the paper vault.</strong>
+    </a><a class="view-card" href="papers/">
+      <span>Recent Papers</span>
+      <strong>Recent-order paper list with journal filtering.</strong>
+    </a><a class="view-card" href="ideas/">
+      <span>Idea Forecaster</span>
+      <strong>High-priority next-paper idea candidates.</strong>
+    </a>
+  </section>
+  <section class="dashboard">
+    <div class="panel">
+      <h2>Active Research Areas</h2>
+      <ul><li><span>Epigenome</span><strong>14 new / 108 total</strong></li><li><span>Statistical genetics</span><strong>14 new / 24 total</strong></li><li><span>Single-cell and spatial omics</span><strong>12 new / 22 total</strong></li><li><span>Rare disease</span><strong>10 new / 40 total</strong></li><li><span>Genome sequencing methods</span><strong>9 new / 9 total</strong></li></ul>
+    </div>
+    <div class="panel">
+      <h2>Top Journals</h2>
+      <ul><li><span>The American Journal of Human Genetics</span><strong>54</strong></li><li><span>Bioinformatics</span><strong>52</strong></li><li><span>Genome Biology</span><strong>49</strong></li><li><span>Nature Genetics</span><strong>20</strong></li><li><span>Nature</span><strong>9</strong></li><li><span>Nat Commun</span><strong>8</strong></li></ul>
+    </div>
+  </section>
+</main>
+</body>
+</html>
