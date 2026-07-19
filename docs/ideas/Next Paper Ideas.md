@@ -1,6 +1,6 @@
 # Next Paper Ideas
 
-- Generated: 2026-07-18T23:00:12.138Z
+- Generated: 2026-07-19T23:00:12.005Z
 - Source papers: 283
 - Latest year in vault: 2026
 - Minimum references per idea: 6
